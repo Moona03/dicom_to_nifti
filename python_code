@@ -1,0 +1,37 @@
+from __future__ import print_function
+import dicom2nifti 
+import os 
+#import nibabel
+#import nibabel as nib
+#import scipy.ndimage as ndi
+#import matplotlib.pyplot as plt
+
+#import SimpleITK as sitk
+#from glob import glob
+#import numpy as np
+#from ipywidgets import interact, fixed
+#from downloaddata import fetch_data as fdata
+#import dateutil
+#from dateutil import parser
+
+
+#path='C:/Users/user/Desktop/DICOM/image1/image1/DICOM/ST000000/SE000007/*' # The whole patients 
+path_out_data = 'C:/Users/user/Desktop/testDicom/NIFTI/conv_image1' # Output path 
+path_one_patient = 'C:/Users/user/Desktop/testDicom/DICOM/image1' # The path for only one patient 
+
+dicom2nifti.dicom_series_to_nifti(path_one_patient, os.path.join(path_out_data, 'image1.nii')) 
+
+"""
+#visualisation
+
+brain_vol = nib.load('C:/Users/user/Desktop/DICOM/test_image1/premier_test1.nii')
+print(brain_vol.header)
+brain_vol_data = brain_vol.get_fdata()
+type(brain_vol_data)
+plt.imshow(brain_vol_data[96], cmap='bone')
+plt.axis('off')
+plt.show()
+plt.imshow(ndi.rotate(brain_vol_data[96], 90), cmap='bone')
+plt.axis('off')
+plt.show() 
+"""
